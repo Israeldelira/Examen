@@ -1,0 +1,37 @@
+body, html{ margin:0; padding:0;}
+
+.card{
+    outline:none !important;
+
+ border: none;
+}
+.card-body{
+    outline:none !important;
+      border: none;
+}
+section{
+    margin: 0px 0 5em 0;
+}
+/* .d-flex{
+    width: 80%;
+position:relative;    
+padding-left: 50%;
+
+}
+.nav-item {
+    position:relative; 
+    padding-right: 7%;   
+} */
+.m10{
+    padding-right: 23px;
+}
+.navbar-nav > li > a, .navbar-brand {
+   
+    height: 50px; /* aqui escoges el alto que necesites */
+}
+.navbar {
+    min-height:30px !important; /* aqui escoges el alto que necesites */
+}
+.w-150{
+    width: 250px;
+}

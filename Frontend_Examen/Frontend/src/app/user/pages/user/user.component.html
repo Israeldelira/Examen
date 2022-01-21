@@ -1,0 +1,108 @@
+<section class="section-user">
+    <div class="row" *ngIf="!mostrar">
+        <div class="col-8">
+    <div class="card">
+        <div class="card-body">
+           <form  [formGroup]="userForm" autocomplete="=off" class="row g-3"
+           (submit)="agregarUser()">
+              <div class="col-md-6">
+                <label for="inputApellido_pa" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="inputApellido_pa" formControlName="nombres">
+              </div>
+              <div class="col-md-6">
+                <label for="inputApellido_ma" class="form-label">Telefono</label>
+                <input type="number" class="form-control" id="inputApellido_ma" formControlName="telefono">
+              </div>
+                <div class="col-md-6">
+                  <label for="inputApellido_pa" class="form-label">Apellido paterno</label>
+                  <input type="text" class="form-control" id="inputApellido_pa" formControlName="apellido_paterno">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputApellido_ma" class="form-label">Apellido materno</label>
+                  <input type="text" class="form-control" id="inputApellido_ma" formControlName="apellido_materno">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Direccion</label>
+                  <input type="text" class="form-control" id="inputDireccio" placeholder="1234 Main St" formControlName="direccion">
+                </div>
+             
+                
+               
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+              </form>
+        </div>
+    </div>
+        </div>
+     
+    </div>
+
+    <div class="row" *ngIf="mostrar">
+      <div class="col-6">
+  <div class="card">
+      <div class="card-body">
+         <form  [formGroup]="userForm" autocomplete="=off" class="row g-3"
+         (submit)="actualizarUser()">
+            <div class="col-md-6">
+              <label for="inputApellido_pa" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="inputApellido_pa" formControlName="nombres">
+            </div>
+            <div class="col-md-6">
+              <label for="inputApellido_ma" class="form-label">Telefono</label>
+              <input type="number" class="form-control" id="inputApellido_ma" formControlName="telefono">
+            </div>
+              <div class="col-md-6">
+                <label for="inputApellido_pa" class="form-label">Apellido paterno</label>
+                <input type="text" class="form-control" id="inputApellido_pa" formControlName="apellido_paterno">
+              </div>
+              <div class="col-md-6">
+                <label for="inputApellido_ma" class="form-label">Apellido materno</label>
+                <input type="text" class="form-control" id="inputApellido_ma" formControlName="apellido_materno">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="inputDireccio" placeholder="1234 Main St" formControlName="direccion">
+              </div>
+           
+              
+             
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+              </div>
+            </form>
+      </div>
+  </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Usuario seleccionado</h3>
+            <p class="text-muted m-b-10 font-13">Nombre</p>
+            <h6>{{user.resultGetUser?.[0].nombres}}</h6> 
+            
+            <p class="text-muted m-b-10 font-13"> Apellido Paterno</p>
+                <h6>{{user.resultGetUser?.[0].apellido_paterno}}</h6> 
+            <p class="text-muted m-b-10 font-13">Apellido Materno</p>
+            <h6>{{user.resultGetUser?.[0].apellido_materno}}</h6> 
+          
+            <p class="text-muted m-b-10 font-13">Direccion</p>
+            <h6>{{user.resultGetUser?.[0].direccion}}</h6>
+            <p class="text-muted m-b-10 font-13">Telefono</p>
+            <h6>{{user.resultGetUser?.[0].telefono}}</h6>  
+            <!-- <h5>{{ proveedor?.provider.registerUser?.user }}</h5>  -->
+            <br>
+            
+          </div>
+        </div>
+      </div>
+   
+  </div>
+
+
+
+
+</section>
+    
+    
+

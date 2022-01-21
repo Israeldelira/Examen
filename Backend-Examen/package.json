@@ -1,0 +1,28 @@
+{
+  "name": "backend-examen",
+  "version": "1.0.0",
+  "description": "CRUD con mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "start ./server/server",
+    "start": "nodemon ./server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Israeldelira/Backend_Examen.git"
+  },
+  "author": "Israel_DeLira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Israeldelira/Backend_Examen/issues"
+  },
+  "homepage": "https://github.com/Israeldelira/Backend_Examen#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  }
+}

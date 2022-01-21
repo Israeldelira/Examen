@@ -1,0 +1,31 @@
+<section>
+    <nav class="navbar fixed-top navbar-dark bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+              <img src="../../../assets/img/logo.png">
+          </a>
+          <div class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </div>
+          <form class="d-flex ms-auto ">
+            <input #data  (keyup)="extraerData(data.value)"
+            class="form-control me-4 w-150" type="search" placeholder="Buscar" aria-label="Search">
+          </form>
+          <div class="nav-item dropdown  m10">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Buscar por...
+            </a>
+            <ul class="dropdown-menu ms-auto m10" aria-labelledby="navbarScrollingDropdown">
+
+              <li><a class="dropdown-item" [routerLink]="['/search/nombres',termino]">Nombres</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/search/apellidoP',termino]">Apellido Paterno</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/search/apellidoM',termino]">Apellido materno</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </nav>
+    
+</section>

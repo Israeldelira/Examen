@@ -1,0 +1,60 @@
+<section class="section-user">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card"> 
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <h4 class="card-title">  Lista de usuarios -  </h4>
+                        </div>
+                      
+                        <div class="col-3  text-right">
+                            <div class="text-center">
+                                <button [routerLink]="['/user/new']"  class="btn  btn-primary">
+                                 
+                                    Agregar usuario
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-ligth">
+                           
+                            <thead class="table table-dark">
+                              <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Apellido paterno</th>
+                                <th scope="col">Apellido Materno</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let user of users">
+                                <th scope="row">{{user.id_user}}</th>
+                                <td>{{user.nombres}}</td>
+                                <td>{{user.apellido_paterno}}</td>
+                                <td>{{user.apellido_materno}}</td>
+                                <td>{{user.direccion}}</td>
+                                <td>{{user.telefono}}</td>
+                           
+                                <td><button (click)="eliminar(user.id_user)" class="btn btn-danger btn-sm">Borrar</button>
+                                    &nbsp;
+                                 <a   [routerLink]="['/user/',user.id_user]">
+                                    <button class="btn btn-warning btn-sm">Editar</button>
+                                </a>  </td>
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</section>
