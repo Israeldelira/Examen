@@ -3,7 +3,7 @@
 DROP DATABASE IF EXISTS EXAMEN_DB ;
 CREATE DATABASE EXAMEN_DB;
 
-/*Creacion de tabal usuarios con auto_increment y unique
+/*Creacion de tabla usuarios con auto_increment y unique
 PK=id_user*/
 CREATE TABLE `EXAMEN_DB`.`USERS` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
